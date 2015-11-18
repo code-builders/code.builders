@@ -93,7 +93,7 @@
     }
     position: relative;
 
-    &:after {
+    &.animated-underline:after {
       content: "";
       background-color: #555;
       display: block;
@@ -102,23 +102,23 @@
       margin-top: 15px;
       height: 1px;
     }
-    &:nth-child(1):after {
-              animation: slideIn 3s 0s infinite;
-         -moz-animation: slideIn 3s 0s infinite;
-      -webkit-animation: slideIn 3s 0s infinite;
-           -o-animation: slideIn 3s 0s infinite;
-    }
-    &:nth-child(2):after {
+    &.animated-underline:nth-child(1):after {
               animation: slideIn 3s 1s infinite;
          -moz-animation: slideIn 3s 1s infinite;
       -webkit-animation: slideIn 3s 1s infinite;
            -o-animation: slideIn 3s 1s infinite;
     }
-    &:nth-child(3):after {
+    &.animated-underline:nth-child(2):after {
               animation: slideIn 3s 2s infinite;
          -moz-animation: slideIn 3s 2s infinite;
       -webkit-animation: slideIn 3s 2s infinite;
            -o-animation: slideIn 3s 2s infinite;
+    }
+    &.animated-underline:nth-child(3):after {
+              animation: slideIn 3s 3s infinite;
+         -moz-animation: slideIn 3s 3s infinite;
+      -webkit-animation: slideIn 3s 3s infinite;
+           -o-animation: slideIn 3s 3s infinite;
     }
 
 

@@ -733,7 +733,7 @@ nav a.button {
     margin-right: 0;
   }
 }
-.about-wrapper .columns:after {
+.about-wrapper .columns.animated-underline:after {
   content: "";
   background-color: #555;
   display: block;
@@ -742,23 +742,23 @@ nav a.button {
   margin-top: 15px;
   height: 1px;
 }
-.about-wrapper .columns:nth-child(1):after {
-  animation: slideIn 3s 0s infinite;
-  -moz-animation: slideIn 3s 0s infinite;
-  -webkit-animation: slideIn 3s 0s infinite;
-  -o-animation: slideIn 3s 0s infinite;
-}
-.about-wrapper .columns:nth-child(2):after {
+.about-wrapper .columns.animated-underline:nth-child(1):after {
   animation: slideIn 3s 1s infinite;
   -moz-animation: slideIn 3s 1s infinite;
   -webkit-animation: slideIn 3s 1s infinite;
   -o-animation: slideIn 3s 1s infinite;
 }
-.about-wrapper .columns:nth-child(3):after {
+.about-wrapper .columns.animated-underline:nth-child(2):after {
   animation: slideIn 3s 2s infinite;
   -moz-animation: slideIn 3s 2s infinite;
   -webkit-animation: slideIn 3s 2s infinite;
   -o-animation: slideIn 3s 2s infinite;
+}
+.about-wrapper .columns.animated-underline:nth-child(3):after {
+  animation: slideIn 3s 3s infinite;
+  -moz-animation: slideIn 3s 3s infinite;
+  -webkit-animation: slideIn 3s 3s infinite;
+  -o-animation: slideIn 3s 3s infinite;
 }
 .about-wrapper img {
   display: inline-block;
