@@ -409,8 +409,8 @@ body {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
-main {
-  background-color: white;
+ul {
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -465,10 +465,20 @@ a.button.button-block,
   line-height: 1.2;
   color: #eeeeee;
 }
+@media screen and (max-width: 667px) {
+  .lead {
+    font-size: 16px;
+  }
+}
 
 header {
   background-color: #277A8E;
   border-bottom: 2px solid #11353e;
+}
+@media screen and (max-width: 667px) {
+  header {
+    padding: 0 5px;
+  }
 }
 
 nav {
@@ -491,9 +501,25 @@ nav a {
   line-height: 140px;
   color: white;
 }
-nav a .button {
+nav a.tall-link:hover {
+  background-color: #11353e;
+}
+nav a.button {
   height: 50px;
+  line-height: 25px;
+  width: 180px;
   padding: 10px 30px;
+}
+@media screen and (max-width: 667px) {
+  nav a {
+    font-size: 12px;
+    width: 80px;
+    height: 90px;
+    line-height: 85px;
+  }
+  nav a.button {
+    display: none;
+  }
 }
 
 .logo {
@@ -521,6 +547,16 @@ nav a .button {
   font-weight: bold;
   position: relative;
 }
+@media screen and (max-width: 667px) {
+  .logo a {
+    border: 2px solid white;
+    height: 50px;
+    width: 52px;
+    padding: 6px;
+    font-size: 20pt;
+    line-height: 35px;
+  }
+}
 .logo a:hover {
   background-color: #11353e;
 }
@@ -530,6 +566,13 @@ nav a .button {
   position: absolute;
   top: 5px;
   left: 5px;
+}
+@media screen and (max-width: 667px) {
+  .logo a .atomic-number {
+    font-size: 8px;
+    top: 3px;
+    left: 3px;
+  }
 }
 
 .call-to-action-wrapper {
@@ -545,6 +588,11 @@ nav a .button {
   margin: 25px 0 35px 0;
   font-size: 100px;
 }
+@media screen and (max-width: 667px) {
+  .call-to-action-wrapper .call {
+    font-size: 60px;
+  }
+}
 .call-to-action-wrapper .copy {
   float: left;
   display: block;
@@ -554,6 +602,17 @@ nav a .button {
 }
 .call-to-action-wrapper .copy:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 667px) {
+  .call-to-action-wrapper .copy {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .call-to-action-wrapper .copy:last-child {
+    margin-right: 0;
+  }
 }
 .call-to-action-wrapper .hire-us.button {
   float: left;
@@ -568,11 +627,27 @@ nav a .button {
 .call-to-action-wrapper .hire-us.button:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 667px) {
+  .call-to-action-wrapper .hire-us.button {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .call-to-action-wrapper .hire-us.button:last-child {
+    margin-right: 0;
+  }
+}
 
 .blurb-wrapper {
   padding: 60px 0;
   color: #1d1d1d;
   background-color: #277A8E;
+}
+@media screen and (max-width: 667px) {
+  .blurb-wrapper {
+    padding: 50px 20px;
+  }
 }
 .blurb-wrapper .copy {
   line-height: 1.3;
@@ -646,6 +721,18 @@ nav a .button {
 .about-wrapper .columns:nth-child(3n+1) {
   clear: left;
 }
+@media screen and (max-width: 667px) {
+  .about-wrapper .columns {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-right: 0;
+  }
+  .about-wrapper .columns:last-child {
+    margin-right: 0;
+  }
+}
 .about-wrapper .columns:after {
   content: "";
   background-color: #555;
@@ -683,6 +770,11 @@ nav a .button {
   background-color: #11353e;
   padding: 150px 0;
 }
+@media screen and (max-width: 667px) {
+  .build-wrapper {
+    padding: 50px 20px;
+  }
+}
 .build-wrapper .loud {
   float: left;
   display: block;
@@ -698,6 +790,22 @@ nav a .button {
 .build-wrapper .loud:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 667px) {
+  .build-wrapper .loud {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-right: 0;
+  }
+  .build-wrapper .loud h2 {
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
+  .build-wrapper .loud:last-child {
+    margin-right: 0;
+  }
+}
 .build-wrapper .what-we-do {
   float: left;
   display: block;
@@ -707,6 +815,18 @@ nav a .button {
 }
 .build-wrapper .what-we-do:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 667px) {
+  .build-wrapper .what-we-do {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-right: 0;
+  }
+  .build-wrapper .what-we-do:last-child {
+    margin-right: 0;
+  }
 }
 .build-wrapper .what-we-do .button {
   line-height: 100px;
@@ -787,7 +907,7 @@ nav a .button {
 
 .footer-wrapper {
   height: 50px;
-  padding: 15px 0;
+  padding: 15px 5px;
   background-color: #1d1d1d;
   border-top: 1px solid #444;
   color: #aaa;
@@ -796,7 +916,8 @@ nav a .button {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%;
+  width: 48.82117%;
+  font-size: 10px;
 }
 .footer-wrapper .legal:last-child {
   margin-right: 0;
@@ -806,7 +927,7 @@ nav a .button {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%;
+  width: 48.82117%;
   margin-right: 0;
   text-align: right;
 }
