@@ -801,6 +801,7 @@ nav a.button {
   .build-wrapper .loud h2 {
     border-right: none;
     border-bottom: 1px solid white;
+    padding-bottom: 15px;
   }
   .build-wrapper .loud:last-child {
     margin-right: 0;
