@@ -1,4 +1,10 @@
 $(function() {
+  var bg = $(".call-to-action-wrapper")
+  $(window).scroll(function() {
+    bg.css({
+      backgroundPositionY: -window.pageYOffset/7
+    })
+  });
 
   $(".about-wrapper .columns").addClass("animated-underline");
 
