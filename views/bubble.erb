@@ -1,0 +1,70 @@
+<svg viewBox="0 0 200 200" id="svg_<%= i %>" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+<g visibility='hidden' fill="white" id="bio_<%= i %>">
+  <circle cx="50%" cy="50%" r="50%" id="circle_<%= i %>" opacity="0.8" fill="black">
+  </circle>
+  <animate attributeType="XML"
+  xlink:href="#circle_<%=i%>"
+  attributeName="r"
+  from="50%" to="100%"
+  dur="0.2s"
+  begin="svg_<%= i %>.click + 0.01"
+  fill="freeze"
+  repeatCount="1"/>
+  <animate attributeType="XML"
+  xlink:href="#circle_<%=i%>"
+  attributeName="r"
+  from="100%" to="50%"
+  dur="0.2s"
+  fill="freeze"
+  begin="bio_<%= i %>.mouseout"
+  id="hide-circle_<%= i %>"
+  repeatCount="1"/>
+
+  <animate attributeType="XML"
+  xlink:href="#text_<%=i%>"
+  attributeName="opacity"
+  from="1" to="0"
+  dur="0.2s"
+  begin="bio_<%= i %>.mouseout"
+  fill="freeze"
+  repeatCount="1"/>
+  <animate attributeType="XML"
+  xlink:href="#text_<%=i%>"
+  attributeName="opacity"
+  from="0" to="1"
+  dur="0.1s"
+  begin="svg_<%= i %>.click"
+  fill="freeze"
+  repeatCount="1"/>
+  <animate attributeType="XML"
+  attributeName="opacity"
+  from="0" to="1"
+  dur="0.2s"
+  begin="svg_<%= i %>.click"
+  fill="freeze"
+  repeatCount="1"/>
+  <animate attributeType="XML"
+  attributeName="visibility"
+  from="visible" to="hidden"
+  dur="0.01s"
+  begin="bio_<%= i %>.mouseout + 0.19"
+  fill="freeze"
+  repeatCount="1"/>
+  <animate attributeType="XML"
+  attributeName="visibility"
+  from="hidden" to="visible"
+  dur="0.01s"
+  begin="svg_<%= i %>.click"
+  fill="freeze"
+  repeatCount="1"/>
+
+  <foreignObject opacity="0" id="text_<%=i%>" x="-25%" y="-35%" width="150%" height="150%">
+
+    <body class='bubble-copy' xmlns="http://www.w3.org/1999/xhtml">
+      <%= erb person %>
+    </body>
+  </foreignObject>
+
+</g>
+</svg>

@@ -133,38 +133,11 @@
 
 .build-wrapper {
   background-color: $primary-dark;
-  padding: 150px 0;
-  @include media($mobile) {
-    padding: 50px 20px;
-  }
-  .loud {
-    h2 {
-      font-size: 15vw;
-      line-height: 12vw;
-      border-right: 1px solid $white;
-      color: $white;
-    }
-    @include span-columns(5);
+  padding: 50px 0;
+  .people {
+    padding: 50px 0;
     @include media($mobile) {
-      h2 {
-        border-right: none;
-        border-bottom: 1px solid white;
-        padding-bottom: 15px;
-      }
-      @include span-columns(12);
-      @include omega();
-    }
-  }
-  .what-we-do {
-    @include span-columns(7);
-    @include omega;
-    @include media($mobile) {
-      @include span-columns(12);
-      @include omega();
-    }
-
-    .button {
-      line-height: 100px;
+      padding: 50px 20px;
     }
   }
 }

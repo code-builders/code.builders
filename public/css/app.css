@@ -439,6 +439,13 @@ a:hover {
   display: table;
 }
 
+.header {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #eeeeee;
+}
+
 a.button,
 .button {
   border: 2px solid #FF7260;
@@ -769,69 +776,15 @@ nav a.button {
 
 .build-wrapper {
   background-color: #11353e;
-  padding: 150px 0;
+  padding: 50px 0;
+}
+.build-wrapper .people {
+  padding: 50px 0;
 }
 @media screen and (max-width: 667px) {
-  .build-wrapper {
+  .build-wrapper .people {
     padding: 50px 20px;
   }
-}
-.build-wrapper .loud {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-}
-.build-wrapper .loud h2 {
-  font-size: 15vw;
-  line-height: 12vw;
-  border-right: 1px solid #eeeeee;
-  color: #eeeeee;
-}
-.build-wrapper .loud:last-child {
-  margin-right: 0;
-}
-@media screen and (max-width: 667px) {
-  .build-wrapper .loud {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    margin-right: 0;
-  }
-  .build-wrapper .loud h2 {
-    border-right: none;
-    border-bottom: 1px solid white;
-    padding-bottom: 15px;
-  }
-  .build-wrapper .loud:last-child {
-    margin-right: 0;
-  }
-}
-.build-wrapper .what-we-do {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%;
-  margin-right: 0;
-}
-.build-wrapper .what-we-do:last-child {
-  margin-right: 0;
-}
-@media screen and (max-width: 667px) {
-  .build-wrapper .what-we-do {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    margin-right: 0;
-  }
-  .build-wrapper .what-we-do:last-child {
-    margin-right: 0;
-  }
-}
-.build-wrapper .what-we-do .button {
-  line-height: 100px;
 }
 
 .clients-wrapper {
@@ -935,6 +888,66 @@ nav a.button {
 }
 .footer-wrapper .social:last-child {
   margin-right: 0;
+}
+
+.person {
+  position: relative;
+  padding: 30px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  text-align: center;
+  overflow: visible;
+  color: #FF7260;
+  font-weight: bold;
+}
+.person:last-child {
+  margin-right: 0;
+}
+.person:nth-child(3n) {
+  margin-right: 0;
+}
+.person:nth-child(3n+1) {
+  clear: left;
+}
+.person svg {
+  padding: 30px;
+  float: left;
+  position: absolute;
+  overflow: visible;
+  top: 0px;
+  left: 0;
+  z-index: 1000;
+}
+.person img {
+  background-color: #d0d0d0;
+  width: 100%;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+.person .bubble {
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  color: white;
+}
+.person:hover .bubble {
+  height: inherit;
+  -webkit-transition: height 1s, -webkit-transform 1s;
+  transition: height 1s, transform 1s;
+}
+
+.bubble-copy h2 {
+  color: white;
+}
+.bubble-copy p {
+  font-weight: normal;
+  color: white;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=app.css.map */

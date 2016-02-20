@@ -9,9 +9,9 @@ module.exports = function(grunt) {
         },
       },
     },
-    sass: {                              // Task
-      dist: {                            // Target
-        options: {                       // Target options
+    sass: {
+      dist: {
+        options: {
           style: 'expanded'
         },
         files: {
