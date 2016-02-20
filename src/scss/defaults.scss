@@ -11,6 +11,8 @@ $light-gray: #aaa;
 $white: #eeeeee;
 // * { outline: 1px solid pink; }
 
+$desktop: min-width 900px;
+$tablet: max-width 900px;
 $mobile: max-width 667px;
 
 

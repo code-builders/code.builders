@@ -30,36 +30,9 @@
 <div class="row build-wrapper">
   <h2 class='header'>Our Team</h2>
   <div class='people container'>
-    <div class='person'>
-      <%= erb :bubble, locals: {i: 0, person: :karen} %>
-      <img src="/images/chris-final.jpg" alt="Karen Hambro" />
-      Chris Hintz
-    </div>
-    <div class='person'>
-      <%= erb :bubble, locals: {i: 1, person: :karen} %>
-      <img src="/images/leshoya-final.jpg" alt="Karen Hambro" />
-      LeShoya Starkey
-    </div>
-    <div class='person'>
-      <%= erb :bubble, locals: {i: 2, person: :karen} %>
-      <img src="/images/evelyn-final.jpg" alt="Karen Hambro" />
-      Evelyn Bell
-    </div>
-    <div class='person'>
-      <%= erb :bubble, locals: {i: 3, person: :karen} %>
-      <img src="/images/daniel-final.jpg" alt="Karen Hambro" />
-      Daniel Adler
-    </div>
-    <div class='person'>
-      <%= erb :bubble, locals: {i: 4, person: :karen} %>
-      <img src="/images/tammy-final.jpg" alt="Karen Hambro" />
-      Tammy Pop
-    </div>
-    <div class='person'>
-      <%= erb :bubble, locals: {i: 5, person: :karen} %>
-      <img src="/images/karen-final.jpg" alt="Karen Hambro" />
-      Karen Hambro
-    </div>
+    <% [:chris, :leshoya, :evelyn, :daniel, :tammy, :karen].shuffle.each do |n| %>
+      <%= erb :person, locals: {person: n} %>
+    <% end %>
   </div>
 </div>
 
@@ -76,3 +49,4 @@
     </div>
   </div>
 </div>
+<div class='background-wrap'></div>

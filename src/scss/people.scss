@@ -1,40 +1,36 @@
 .person {
   position: relative;
-  padding: 30px;
-  @include span-columns(4);
-  @include omega(3n);
+  padding: 20px;
   text-align: center;
   overflow: visible;
   color: $red;
   font-weight: bold;
-  svg {
-    padding: 30px;
-    float: left;
-    position: absolute;
-    overflow: visible;
-    top: 0px;
-    left: 0;
-    z-index: 1000;
+  @include media($desktop) {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+  @include media($tablet) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+  @include media($mobile) {
+    @include span-columns(12);
+    @include omega();
+  }
+  .sidebar {
+    color: lighten($primary, 10%);
+    .title {
+      font-weight: normal;
+    }
   }
   img {
-    background-color: lighten($secondary, 50%);
     width: 100%;
     border-radius: 100%;
     margin-bottom: 10px;
+    border: 3px solid $primary-dark;
   }
-  .bubble {
-    height: 0;
-    background-color: rgba(0,0,0, 0.3);
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-    position: absolute;
-    color: white;
-  }
-  &:hover .bubble {
-    height: inherit;
-    -webkit-transition: height 1s, -webkit-transform 1s;
-    transition: height 1s, transform 1s;
+  &:hover img {
+    border: 3px solid $red;
   }
 }
 .bubble-copy {
@@ -45,5 +41,87 @@
     font-weight: normal;
     color: white;
     font-size: 12px;
+  }
+}
+
+.background-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.person {
+  cursor: pointer;
+  .person-info {
+    display: none;
+  }
+}
+.person.active {
+  z-index: 1000;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  cursor: default;
+  @include span-columns(12);
+  img, &:hover img {
+    border: none;
+  }
+  .close-background {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    @include media($mobile) {
+    }
+  }
+  .sidebar {
+    color: $red;
+    @include span-columns(3);
+    @include media($mobile) {
+      @include span-columns(6);
+      @include shift(3);
+    }
+    .name,
+    .title {
+      display: none;
+    }
+
+  }
+  .person-name {
+    font-size: 48px;
+    border-bottom: 1px solid gray;
+  }
+  .person-info {
+    font-weight: normal;
+    text-align: left;
+    @include span-columns(8);
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+    p {
+      text-align: justify;
+      color: $light-gray;
+    }
+
+    .qa {
+      margin: 20px 0;
+      .q {
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .a {
+        text-align: justify;
+        color: $light-gray;
+      }
+    }
+    a i {
+      display: inline-block;
+      margin: 0 5px;
+    }
   }
 }

@@ -892,53 +892,72 @@ nav a.button {
 
 .person {
   position: relative;
-  padding: 30px;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
+  padding: 20px;
   text-align: center;
   overflow: visible;
   color: #FF7260;
   font-weight: bold;
 }
-.person:last-child {
-  margin-right: 0;
+@media screen and (min-width: 900px) {
+  .person {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .person:last-child {
+    margin-right: 0;
+  }
+  .person:nth-child(3n) {
+    margin-right: 0;
+  }
+  .person:nth-child(3n+1) {
+    clear: left;
+  }
 }
-.person:nth-child(3n) {
-  margin-right: 0;
+@media screen and (max-width: 900px) {
+  .person {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .person:last-child {
+    margin-right: 0;
+  }
+  .person:nth-child(2n) {
+    margin-right: 0;
+  }
+  .person:nth-child(2n+1) {
+    clear: left;
+  }
 }
-.person:nth-child(3n+1) {
-  clear: left;
+@media screen and (max-width: 667px) {
+  .person {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-right: 0;
+  }
+  .person:last-child {
+    margin-right: 0;
+  }
 }
-.person svg {
-  padding: 30px;
-  float: left;
-  position: absolute;
-  overflow: visible;
-  top: 0px;
-  left: 0;
-  z-index: 1000;
+.person .sidebar {
+  color: #329cb6;
+}
+.person .sidebar .title {
+  font-weight: normal;
 }
 .person img {
-  background-color: #d0d0d0;
   width: 100%;
   border-radius: 100%;
   margin-bottom: 10px;
+  border: 3px solid #11353e;
 }
-.person .bubble {
-  height: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-  position: absolute;
-  color: white;
-}
-.person:hover .bubble {
-  height: inherit;
-  -webkit-transition: height 1s, -webkit-transform 1s;
-  transition: height 1s, transform 1s;
+.person:hover img {
+  border: 3px solid #FF7260;
 }
 
 .bubble-copy h2 {
@@ -948,6 +967,119 @@ nav a.button {
   font-weight: normal;
   color: white;
   font-size: 12px;
+}
+
+.background-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.person {
+  cursor: pointer;
+}
+.person .person-info {
+  display: none;
+}
+
+.person.active {
+  z-index: 1000;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  cursor: default;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+.person.active:last-child {
+  margin-right: 0;
+}
+.person.active img, .person.active:hover img {
+  border: none;
+}
+.person.active .close-background {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.person.active .sidebar {
+  color: #FF7260;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+}
+.person.active .sidebar:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 667px) {
+  .person.active .sidebar {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%;
+  }
+  .person.active .sidebar:last-child {
+    margin-right: 0;
+  }
+}
+.person.active .sidebar .name,
+.person.active .sidebar .title {
+  display: none;
+}
+.person.active .person-name {
+  font-size: 48px;
+  border-bottom: 1px solid gray;
+}
+.person.active .person-info {
+  font-weight: normal;
+  text-align: left;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+}
+.person.active .person-info:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 667px) {
+  .person.active .person-info {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .person.active .person-info:last-child {
+    margin-right: 0;
+  }
+}
+.person.active .person-info p {
+  text-align: justify;
+  color: #aaa;
+}
+.person.active .person-info .qa {
+  margin: 20px 0;
+}
+.person.active .person-info .qa .q {
+  font-size: 22px;
+  font-weight: bold;
+}
+.person.active .person-info .qa .a {
+  text-align: justify;
+  color: #aaa;
+}
+.person.active .person-info a i {
+  display: inline-block;
+  margin: 0 5px;
 }
 
 /*# sourceMappingURL=app.css.map */
