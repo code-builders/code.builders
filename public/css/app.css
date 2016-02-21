@@ -599,7 +599,7 @@ nav a.button {
 }
 @media screen and (max-width: 667px) {
   .call-to-action-wrapper .call {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 .call-to-action-wrapper h2 {
