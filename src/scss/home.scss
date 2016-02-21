@@ -32,6 +32,30 @@
   }
 }
 
+.our-process-wrapper {
+  min-height: 100vh;
+  background-color: $white;
+  padding: 50px 0;
+  .our-process {
+    text-align: justify;
+    @include span-columns(6);
+    @include shift(3);
+    color: $primary;
+    @include media($mobile) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+    h3 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    p {
+      font-family: Arvo;
+      line-height: 1.5;
+    }
+  }
+}
 .blurb-wrapper {
   padding: 60px 0;
   color: $secondary-dark;
@@ -134,6 +158,18 @@
 .build-wrapper {
   background-color: $primary-dark;
   padding: 50px 0;
+  .header {
+    @include span-columns(4);
+    @include shift(4);
+    @include media($mobile) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+    border-bottom: 1px solid white;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    font-weight: 100;
+  }
   .people {
     padding: 50px 0;
     @include media($mobile) {

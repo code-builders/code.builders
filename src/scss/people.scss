@@ -29,8 +29,14 @@
     margin-bottom: 10px;
     border: 3px solid $primary-dark;
   }
-  &:hover img {
-    border: 3px solid $red;
+  &:hover {
+    .title,
+    .name {
+      color: $white;
+    }
+    img {
+      border: 3px solid $red;
+    }
   }
 }
 .bubble-copy {
@@ -59,6 +65,14 @@
   .person-info {
     display: none;
   }
+  .name,
+  .title {
+    color: $white;
+  }
+  .title {
+    font-family: $serif-font;
+    font-size: 14px;
+  }
 }
 .person.active {
   z-index: 1000;
@@ -73,7 +87,7 @@
     border: none;
   }
   .close-background {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     @include media($mobile) {
@@ -95,6 +109,13 @@
   .person-name {
     font-size: 48px;
     border-bottom: 1px solid gray;
+    line-height: 1;
+    @include media($mobile) {
+      small {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
   }
   .person-info {
     font-weight: normal;
@@ -122,6 +143,27 @@
     a i {
       display: inline-block;
       margin: 0 5px;
+    }
+  }
+}
+
+.staff {
+  .person {
+    @include media($desktop) {
+      @include span-columns(4);
+      @include shift(4);
+    }
+    @include media($tablet) {
+      @include span-columns(6);
+      @include shift(3);
+    }
+    @include media($mobile) {
+      @include span-columns(12);
+      @include shift(0);
+    }
+    &.active {
+      @include span-columns(12);
+      @include shift(0);
     }
   }
 }

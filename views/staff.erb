@@ -1,0 +1,11 @@
+<div class='person'>
+  <div class='sidebar'>
+    <img src="/images/people/<%= person %>.jpg" alt="<%= person %>" />
+    <h4 class='name'><%= person.to_s.capitalize %></h4>
+    <span class='title'>CTO</span>
+  </div>
+  <div class='person-info'>
+    <a href="#"><i class='close-background fa fa-times-circle fa-2x'></i></a>
+    <%= erb person %>
+  </div>
+</div>

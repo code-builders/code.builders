@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo);
 $mobile: new-breakpoint(max-width 900px 4);
 $desktop: new-breakpoint(min-width 900px 12);
 $primary: #277A8E;
@@ -9,6 +10,7 @@ $secondary-light: lighten($secondary, 20%);
 $red: #FF7260;
 $light-gray: #aaa;
 $white: #eeeeee;
+$serif-font: Arvo;
 // * { outline: 1px solid pink; }
 
 $desktop: min-width 900px;
