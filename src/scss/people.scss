@@ -148,10 +148,23 @@
 }
 
 .staff {
+  .header {
+    @include span-columns(12);
+    border-bottom: 1px solid white;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    font-weight: 100;
+  }
+  .bio-text {
+    @include span-columns(8);
+    @include media($tablet) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+  }
   .person {
     @include media($desktop) {
       @include span-columns(4);
-      @include shift(4);
     }
     @include media($tablet) {
       @include span-columns(6);

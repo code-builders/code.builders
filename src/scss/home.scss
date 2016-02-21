@@ -2,8 +2,8 @@
   background-image: url("/images/bg.jpg");
   background-size: cover;
   color: $white;
-  min-height: 500px;
-  padding: 80px 30px 80px 30px;
+  min-height: calc(100vh - $header-height);
+  padding: 80px 30px 100px 30px;
   .call {
     line-height: 1;
     color: $white;
@@ -13,7 +13,13 @@
       font-size: 60px;
     }
   }
+  h2 {
+    display: inline-block;
+  }
   .copy {
+    span {
+      font-weight: bold;
+    }
     @include span-columns(6);
     margin-top: 0;
     @include media($mobile) {
@@ -33,7 +39,6 @@
 }
 
 .our-process-wrapper {
-  min-height: 100vh;
   background-color: $white;
   padding: 50px 0;
   .our-process {
@@ -52,7 +57,16 @@
     }
     p {
       font-family: Arvo;
+      font-size: 18px;
       line-height: 1.5;
+    }
+    .button {
+      padding: 10px 0;
+      margin: 50px 0 10px 0;
+      font-weight: normal;
+      &:hover {
+        background-color: darken($white, 5%);
+      }
     }
   }
 }
@@ -158,18 +172,6 @@
 .build-wrapper {
   background-color: $primary-dark;
   padding: 50px 0;
-  .header {
-    @include span-columns(4);
-    @include shift(4);
-    @include media($mobile) {
-      @include span-columns(10);
-      @include shift(1);
-    }
-    border-bottom: 1px solid white;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    font-weight: 100;
-  }
   .people {
     padding: 50px 0;
     @include media($mobile) {
@@ -180,17 +182,39 @@
 
 
 .clients-wrapper {
-  padding: 80px 0;
-  .container {
-    @include align-items(center);
-    @include display(flex);
-    @include flex-direction(row);
-    @include justify-content(center);
+  padding: 25px 0 80px 0;
+  @include omega();
+  h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    color: #1d1d1d;
+    border-bottom: 1px solid $secondary-dark;
+    text-align: center;
+    @include span-columns(6);
+    @include shift(3);
+    font-family: $serif-font;
   }
-  .container > div {
-    @include span-columns(4);
+  .clients {
+    @include span-columns(12);
+    @include media($desktop) {
+      @include align-items(center);
+      @include display(flex);
+      @include flex-direction(row);
+      @include justify-content(center);
+    }
+  }
+  .clients > div {
+    @include span-columns(3);
     @include omega(4n);
-    @include flex(1);
+    @include media($desktop) {
+      @include flex(1);
+    }
+    @include media($mobile) {
+      @include span-columns(10);
+      @include shift(1);
+      margin-bottom: 40px;
+    }
 
     text-align: center;
     img {

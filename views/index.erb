@@ -1,7 +1,10 @@
 <div class='row call-to-action-wrapper'>
   <div class='container'>
-    <h1 class='call'>Building Full-Stack Web Apps</h1>
+    <h1 class='call'>
+      Software Development Consultancy 
+    </h1>
     <p class='copy lead'>
+      <span>Full-stack web apps at a fraction of the cost.</span>
       We can materialize your vision or product revamp for a fraction of the cost of traditional software consultancies. Whether it's a new start-up idea, an internal tool, or an upgrade to existing software, Code Builders is a cost effective and collaborative development partner.
     </p>
     <a href="mailto:hire@code.builders">
@@ -12,16 +15,18 @@
 <div class="row our-process-wrapper">
   <div class="container">
     <div class="our-process">
-      <h3>Build your business for the right price</h3>
+      <h3>Our Philosophy</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        We know it’s hard to find software developers. And it’s especially difficult to find skilled junior developers that don’t require heavy on-boarding, on-going training and day-to-day management. This is one of the reasons we started Code Builders, to offer companies a smart way to hire high-quality software developers at a fraction of the cost you’d typically pay. We also offer flexible terms via contract work.
       </p>
+
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        All of our junior developers are managed by our senior developers so you don’t have to spend extra resources on project oversight. This model is a win-win: You get quality, cost-effective development work and our junior developers the reallife experience they need to become highly-skilled and successful developers.
       </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+      <a href="mailto:hire@code.builders">
+        <div class='button'>Contact us to learn more</div>
+      </a>
+
     </div>
   </div>
 </div>
@@ -45,27 +50,46 @@
 
 
 <div class="row build-wrapper">
-  <h2 class='header'>Our Team</h2>
-  <div class='people container'>
-    <% [:chris, :leshoya, :evelyn, :daniel, :tammy, :karen].shuffle.each do |n| %>
-      <%= erb :person, locals: {person: n} %>
-    <% end %>
+  <div class='container'>
     <div class='staff'>
+      <div class='bio-text lead'>
+        <h2 class='header'>Meet Our Developers </h2>
+        <p>
+          All of our developers are trained in the latest technologies, common agile workflows and communication strategies. We’re well-versed in ruby, rails, javascript, html, css and more.
+        </p>
+        <p>
+          Our junior developers have completed the first six months of classroom instruction, where they learn the technologies needed to successfully program, deploy, and maintain web applications. All of our junior developers are accompanied by senior developers on all projects.
+        </p>
+        <p>
+          Our senior developers have a combined 10 years of experience.
+        </p>
+      </div>
       <%= erb :staff, locals: {person: :bookis} %>
+    </div>
+    <div class="people">
+      <% [:chris, :leshoya, :evelyn, :daniel, :tammy, :karen].shuffle.each do |n| %>
+      <%= erb :person, locals: {person: n} %>
+      <% end %>
     </div>
   </div>
 </div>
 
 <div class='row clients-wrapper'>
+  <h2>Some of our customers</h2>
   <div class='container'>
-    <div>
-      <a href="http://lightintheattic.net"><img src="/images/lita.png" /></a>
-    </div>
-    <div>
-      <a href="http://amazon.com"><img src="/images/amazon.png" /></a>
-    </div>
-    <div>
-      <a href="http://lunasandals.com"><img src="/images/luna.png" /></a>
+    <div class='clients'>
+      <div>
+        <a href="http://blueskybridal.com"><img src="/images/blue-sky.png" /></a>
+      </div>
+      <div>
+        <a href="http://lightintheattic.net"><img src="/images/lita.png" /></a>
+      </div>
+      <div>
+        <a href="http://amazon.com"><img src="/images/amazon.png" /></a>
+      </div>
+      <div>
+        <a href="http://lunasandals.com"><img src="/images/luna.png" /></a>
+      </div>
     </div>
   </div>
 </div>

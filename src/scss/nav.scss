@@ -23,8 +23,8 @@ nav {
     text-align: center;
     display: inline-block;
     width: 130px;
-    height: 140px;
-    line-height: 140px;
+    height: $header-height;
+    line-height: $header-height;
     color: white;
     &.tall-link:hover {
       background-color: $primary-dark;
