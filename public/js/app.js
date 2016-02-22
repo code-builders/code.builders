@@ -9,8 +9,8 @@ $(function() {
   $(".person").click(function() {
     $(".background-wrap").fadeIn(100);
     $(this).addClass("active")
-    return false;
   });
+
   $(".close-background").click(function() {
     $(".background-wrap").fadeOut(100);
     $(".active").removeClass("active");
