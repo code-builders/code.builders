@@ -11,7 +11,7 @@ var people = {
 };
 
 window.onpopstate = function(event) {
-  if (event.state) {
+  if (event.state && event.state.visible) {
     people.show(event.state.target);
   } else {
     people.hide();
