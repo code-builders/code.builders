@@ -1,11 +1,11 @@
 var people = {
   show: function(id) {
     this.hide()
-    $(".background-wrap").fadeIn(100);
+    $(".background-wrap").show();
     $("#" + id).addClass("active")
   },
   hide: function() {
-    $(".background-wrap").fadeOut(100);
+    $(".background-wrap").hide();
     $(".active").removeClass("active");
   }
 };
