@@ -1,3 +1,23 @@
+var people = {
+  show: function(id) {
+    this.hide()
+    $(".background-wrap").fadeIn(100);
+    $("#" + id).addClass("active")
+  },
+  hide: function() {
+    $(".background-wrap").fadeOut(100);
+    $(".active").removeClass("active");
+  }
+};
+
+window.onpopstate = function(event) {
+  if (event.state) {
+    people.show(event.state.target);
+  } else {
+    people.hide();
+  }
+};
+
 $(function() {
   var bg = $(".call-to-action-wrapper")
   $(window).scroll(function() {
@@ -7,13 +27,13 @@ $(function() {
   });
 
   $(".person").click(function() {
-    $(".background-wrap").fadeIn(100);
-    $(this).addClass("active")
+    history.pushState({target: $(this).attr("id"), visible: true});
+    people.show($(this).attr("id"));
   });
 
   $(".close-background").click(function() {
-    $(".background-wrap").fadeOut(100);
-    $(".active").removeClass("active");
+    history.pushState();
+    people.hide();
     return false;
   });
 
