@@ -27,12 +27,13 @@ $(function() {
   });
 
   $(".person").click(function() {
-    history.pushState({target: $(this).attr("id"), visible: true});
-    people.show($(this).attr("id"));
+    var id = $(this).attr("id"))
+    history.pushState({target: $(this).attr("id"), visible: true}, id, id);
+    people.show(id);
   });
 
   $(".close-background").click(function() {
-    history.pushState();
+    history.pushState({}, "", "/");
     people.hide();
     return false;
   });
