@@ -27,7 +27,7 @@ $(function() {
   });
 
   $(".person").click(function() {
-    var id = $(this).attr("id"))
+    var id = $(this).attr("id")
     history.pushState({target: $(this).attr("id"), visible: true}, id, id);
     people.show(id);
   });
