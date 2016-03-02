@@ -240,5 +240,8 @@
     @include span-columns(6);
     @include omega();
     text-align: right;
+    a {
+      margin: 0 5px;
+    }
   }
 }
