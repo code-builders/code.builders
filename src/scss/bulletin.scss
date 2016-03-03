@@ -1,0 +1,38 @@
+.bulletin {
+  display: none;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  .content {
+    color: $white;
+    display: block;
+    padding: 10px 0;
+    @include outer-container;
+    img {
+      display: inline-block;
+      vertical-align: text-bottom;
+      max-height: 30px;
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+  &.on {
+    display: block;
+  }
+  &.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  @include media($mobile) {
+     font-size: 18px;
+     .content img {
+       max-height: 20px;
+     }
+
+  }
+}
