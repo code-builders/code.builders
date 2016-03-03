@@ -24,6 +24,12 @@ $(function() {
     bg.css({
       backgroundPositionY: -window.pageYOffset/7
     })
+    var offset = $(".our-process-wrapper").offset().top;
+    if ($(window).scrollTop() > offset) {
+      $(".bulletin").addClass("fixed")
+    } else {
+      $(".bulletin").removeClass("fixed")
+    }
   });
 
   $(".person").click(function() {

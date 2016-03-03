@@ -656,7 +656,7 @@ nav a.button {
 
 .our-process-wrapper {
   background-color: #eeeeee;
-  padding: 50px 0;
+  padding: 80px 0 50px 0;
 }
 .our-process-wrapper .our-process {
   text-align: justify;
@@ -1079,6 +1079,7 @@ nav a.button {
 .background-wrap {
   display: none;
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -1282,6 +1283,53 @@ nav a.button {
 }
 .staff .person.active:last-child {
   margin-right: 0;
+}
+
+.bulletin {
+  display: none;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+}
+.bulletin .content {
+  color: #eeeeee;
+  display: block;
+  padding: 10px 0;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bulletin .content::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.bulletin .content img {
+  display: inline-block;
+  vertical-align: text-bottom;
+  max-height: 30px;
+}
+.bulletin .content:hover {
+  color: #277A8E;
+}
+.bulletin.on {
+  display: block;
+}
+.bulletin.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+@media screen and (max-width: 667px) {
+  .bulletin {
+    font-size: 18px;
+  }
+  .bulletin .content img {
+    max-height: 20px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
