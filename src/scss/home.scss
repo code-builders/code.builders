@@ -186,7 +186,6 @@
   @include omega();
   h2 {
     font-size: 32px;
-    margin-bottom: 40px;
     padding-bottom: 25px;
     color: #1d1d1d;
     border-bottom: 1px solid $secondary-dark;
@@ -197,29 +196,32 @@
   }
   .clients {
     @include span-columns(12);
+    &:first-child {
+      border-bottom: 1px dashed $secondary-dark;
+      padding-bottom: 40px;
+    }
     @include media($desktop) {
-      @include align-items(center);
       @include display(flex);
-      @include flex-direction(row);
-      @include justify-content(center);
+      @include flex-wrap(wrap);
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-end;
     }
   }
   .clients > div {
-    @include span-columns(3);
-    @include omega(4n);
-    @include media($desktop) {
-      @include flex(1);
-    }
+    @include span-columns(4);
+    @include omega(3n);
     @include media($mobile) {
       @include span-columns(10);
       @include shift(1);
-      margin-bottom: 40px;
     }
 
     text-align: center;
     img {
       max-width: 100%;
       max-height: 150px;
+      margin-top: 60px;
     }
   }
   @include clearfix;
