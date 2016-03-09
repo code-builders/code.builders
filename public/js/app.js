@@ -32,7 +32,7 @@ $(function() {
     }
   });
 
-  $(".person").click(unction() {
+  $(".person").click(function() {
     var id = $(this).attr("id")
     history.pushState({target: $(this).attr("id"), visible: true}, id, "/");
     people.show(id);
