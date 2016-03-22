@@ -11,6 +11,9 @@
     display: block;
     padding: 10px 0;
     @include outer-container;
+    span {
+      text-decoration: underline;
+    }
     img {
       display: inline-block;
       vertical-align: text-bottom;

@@ -227,6 +227,61 @@
   @include clearfix;
 }
 
+.contact-wrapper {
+  background-color: white;
+  color: $secondary-dark;
+  padding: 60px 0 100px 0;
+  .heading {
+    margin-bottom: 50px;
+    text-align: center;
+    @include span-columns(8);
+    @include shift(2);
+    font-family: $serif-font;
+    @include clearfix;
+  }
+  h2 {
+    font-size: 32px;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $secondary-dark;
+  }
+  h3 {
+    font-size: 24px;
+    @include span-columns(12);
+    text-align: center;
+  }
+  form > div {
+    @include span-columns(12);
+  }
+  .field {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+  #{$all-text-inputs} {
+    padding: 10px;
+    border: none;
+    height: 60px;
+    font-size: 18px;
+    background-color: darken(white, 5%);
+    border-bottom: 2px solid #ddd;
+    @include placeholder {
+      font-size: 21px;
+    }
+  }
+  textarea, input, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .button {
+    background-color: transparent;
+    padding: 15px;
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}
+
 .footer-wrapper {
   height: 50px;
   padding: 15px 5px;
